@@ -1,0 +1,59 @@
+.nav-hover {
+    position: relative;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%); 
+}
+
+.nav-hover:hover::after {
+    width: 100%;
+}
+.section-1{
+    background-image: url(images/DeWatermark.ai_1742113826096.png);
+    background-size: cover;
+    height: 800px;
+}
+.change{
+    color:yellow;
+}
+.bold{
+    font-weight: bold !important;
+}
+.card{
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    background: #e9ecef !important;
+}
+.contact{
+    position: relative;
+}
+.contact::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #2576ef;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
