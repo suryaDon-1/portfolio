@@ -1,3 +1,4 @@
+/* Global Styles */
 .nav-hover {
     position: relative;
     color: white !important;
@@ -20,32 +21,53 @@
 .nav-hover:hover::after {
     width: 100%;
 }
-.section-1{
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.section-1 {
     background-image: url(images/DeWatermark.ai_1742113826096.png);
     background-size: cover;
-    height: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
-.change{
-    color:yellow;
+
+.change {
+    color: yellow;
 }
-.bold{
+
+.bold {
     font-weight: bold !important;
 }
-.card{
+.mypic{
+    width: auto !important;
+}
+
+.card {
     background: #f8f9fa;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
+
 .card:hover {
     transform: translateY(-5px);
     background: #e9ecef !important;
 }
-.contact{
+
+.contact {
     position: relative;
 }
-.contact::after{
+
+.contact::after {
     content: "";
     position: absolute;
     display: block;
@@ -57,30 +79,33 @@
     bottom: 0;
     margin: auto;
 }
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .section-1 {
-        height: 600px;
-        padding: 40px;
-    }
-    .intro {
-        font-size: 2.5rem;
-    }
-    .about-text {
-        font-size: 1rem;
-    }
-    .card {
-        width: 100%;
-    }
-    .container {
-        padding: 15px;
-    }
+
+/* Center Profile Card & Add Space Between Sections */
+.about .card {
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
+.about .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Fully Responsive Design for Mobile Screens */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
     .section-1 {
-        height: 500px;
-        padding: 30px;
+        height: auto;
+        padding: 40px 20px;
+    }
+    .container-fluid {
+        max-width: 100%;
+        overflow-x: hidden;
     }
     .intro {
         font-size: 2rem;
@@ -95,12 +120,38 @@
         display: block;
         margin-bottom: 5px;
     }
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .about .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .about .card {
+        width: 100%;
+        text-align: center;
+    }
+    .about-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 576px) {
     .section-1 {
-        height: 400px;
-        padding: 20px;
+        height: auto;
+        padding: 30px 15px;
+    }
+    .container-fluid {
+        max-width: 100%;
     }
     .intro {
         font-size: 1.5rem;
@@ -110,5 +161,59 @@
     }
     .contact::after {
         width: 30px;
+    }
+    .container {
+        padding: 5px;
+        max-width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+    .about .row {
+        gap: 40px;
+    }
+    .about .card {
+        width: 100%;
+        text-align: center;
+    }
+    .about .container {
+        padding: 10px;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-1 {
+        height: auto;
+        padding: 20px 10px;
+    }
+    .container-fluid {
+        max-width: 100%;
+    }
+    .intro {
+        font-size: 1.2rem;
+    }
+    .about-text {
+        font-size: 0.8rem;
+    }
+    .contact::after {
+        width: 20px;
+    }
+    .about .row {
+        gap: 50px;
+    }
+    .about .card {
+        width: 100%;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
     }
 }
