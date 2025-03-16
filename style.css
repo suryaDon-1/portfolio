@@ -48,6 +48,7 @@ html, body {
 }
 .mypic{
     width: auto !important;
+    margin: 10px !important;
 }
 
 .card {
