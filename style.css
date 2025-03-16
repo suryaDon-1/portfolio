@@ -57,3 +57,58 @@
     bottom: 0;
     margin: auto;
 }
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .section-1 {
+        height: 600px;
+        padding: 40px;
+    }
+    .intro {
+        font-size: 2.5rem;
+    }
+    .about-text {
+        font-size: 1rem;
+    }
+    .card {
+        width: 100%;
+    }
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-1 {
+        height: 500px;
+        padding: 30px;
+    }
+    .intro {
+        font-size: 2rem;
+    }
+    .card {
+        width: 100%;
+    }
+    .contact {
+        text-align: center;
+    }
+    .list-inline-item {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-1 {
+        height: 400px;
+        padding: 20px;
+    }
+    .intro {
+        font-size: 1.5rem;
+    }
+    .about-text {
+        font-size: 0.9rem;
+    }
+    .contact::after {
+        width: 30px;
+    }
+}
